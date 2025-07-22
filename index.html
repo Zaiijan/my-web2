@@ -3,7 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Welcome</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       padding: 0;
@@ -13,8 +18,11 @@
       animation: gradientBG 15s ease infinite;
       color: white;
       text-align: center;
-      height: 100vh;
-      overflow: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
     @keyframes gradientBG {
@@ -25,7 +33,7 @@
 
     h1 {
       font-size: 60px;
-      margin-top: 60px;
+      margin: 20px 0;
     }
 
     button {
@@ -37,7 +45,7 @@
       border-radius: 10px;
       cursor: pointer;
       transition: background-color 0.3s ease, transform 0.2s ease;
-      margin-top: 20px;
+      margin: 10px 0 30px;
     }
 
     button:hover {
@@ -48,8 +56,8 @@
     .social-icons {
       display: flex;
       justify-content: center;
-      gap: 30px;
-      margin-top: 40px;
+      gap: 20px;
+      flex-wrap: wrap;
     }
 
     .social-icons a img {
@@ -66,13 +74,10 @@
     footer {
       font-size: 14px;
       color: #ccc;
-      position: absolute;
-      bottom: 20px;
-      width: 100%;
-      text-align: center;
+      margin-top: auto;
+      padding-bottom: 15px;
     }
 
-    /* Video Overlay Fullscreen */
     .video-overlay {
       position: fixed;
       top: 100%;
